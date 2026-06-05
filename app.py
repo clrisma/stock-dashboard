@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 
 st.set_page_config(page_title="주식 스코어링 대시보드", layout="wide")
 
-API_KEY = st.secrets["50fa75a9b9066e09d6c5d803f0dadb9b03f5cd2f"]
+API_KEY = st.secrets["DART_API_KEY"]
 
 def get_end_date():
     today = datetime.now()
