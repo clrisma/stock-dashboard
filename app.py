@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 
 st.set_page_config(page_title="주식 스코어링 대시보드", layout="wide")
 
-API_KEY = st.secrets["DART_API_KEY"]
+API_KEY = st.secrets["50fa75a9b9066e09d6c5d803f0dadb9b03f5cd2f"]
 
 def get_end_date():
     today = datetime.now()
@@ -111,7 +111,7 @@ with st.sidebar:
     run_btn = st.button("분석 실행 (15~20분)", type="primary")
 
 if run_btn:
-    corp_df = get_corp_list()
+   
     results = []
     for market_name, listing_code in [("코스피", "KOSPI"), ("코스닥", "KOSDAQ")]:
         if market_filter != "전체" and market_filter != market_name:
